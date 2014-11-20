@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/logo_my_diet_plan"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="LOGIN"
+            android:id="@+id/textView" />
+
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUser"
+            android:hint="Usuario"
+            android:ems="10" />
+
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/txtPass"
+            android:hint="Contraseña" />
+
+        <CheckBox
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Recordar mis datos"
+            android:id="@+id/chkRecordarDatos" />
+
+        <CheckBox
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesion automaticamente"
+            android:id="@+id/chkIniSesAutomatico"
+            android:onClick="onInicioAutomaticoClick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos de inicio incorrectos"
+            android:id="@+id/lblFailLogin"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff1000"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:id="@+id/btnCancelar" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/btnLogin"
+                android:onClick="onClickLogin" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
